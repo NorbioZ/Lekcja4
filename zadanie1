@@ -14,7 +14,7 @@ public class Main {
 
 class Kwadrat {
 
-    private final int bok;
+     int bok;
     public Kwadrat(int bok) {
         this.bok = bok; }
     public int obwod() {
