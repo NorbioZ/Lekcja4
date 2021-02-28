@@ -1,0 +1,35 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Podaj Bok");
+        Kwadrat kwadrat= new Kwadrat(scan.nextInt());
+        System.out.println("Obwód: "+kwadrat.obwod());
+        System.out.println("Pole: "+kwadrat.pole());
+    }
+}
+
+class Kwadrat
+{
+    public int a;
+
+    public Kwadrat(int b)
+    {
+        a=b;
+    }
+
+    public int obwod ()
+    {
+        return a*4;
+    }
+
+    public int pole ()
+    {
+        return a*a;
+    }//Norbert Kulik
+}
