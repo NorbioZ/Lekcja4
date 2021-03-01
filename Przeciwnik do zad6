@@ -1,0 +1,49 @@
+package com.company;
+import java.util.Scanner;
+
+public class Przeciwnik {
+
+    Scanner scanner = new Scanner(System.in);
+    int życie;
+    int obrażenia;
+    int pancerz;
+
+    Przeciwnik() {
+        this.życie = życie;
+        this.obrażenia = obrażenia;
+        this.pancerz = pancerz;
+    }
+
+    public void choose_eq() {
+        System.out.println("Wybierz swoją klasę \n 1. 'Ork', 60HP, 15DMG, 4ARM \n 2. 'Druid', 30HP, 45DMG, 0ARM \n 3. 'Barbarzyńca', 40HP, 20DMG, 10ARM \n 4.'Katapulta', 15HP, 2DMG, 30ARM \n 5.'Słoń bojowy', 50HP, 2DMG,30ARM");
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+                życie = 60;
+                obrażenia = 15;
+                pancerz = 4;
+                break;
+            case 2:
+                życie = 30;
+                obrażenia = 45;
+                pancerz = 0;
+                break;
+            case 3:
+                życie = 40;
+                obrażenia = 20;
+                pancerz = 10;
+                break;
+            case 4:
+                życie = 15;
+                obrażenia =10 ;
+                pancerz = 30;
+                break;
+            case 5:
+                życie = 50;
+                obrażenia = 2;
+                pancerz = 30;
+                break;
+        }
+    }
+}
