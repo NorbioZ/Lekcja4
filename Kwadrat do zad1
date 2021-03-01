@@ -1,0 +1,12 @@
+package com.company;
+public class Kwadrat {
+
+     int bok;
+    public Kwadrat(int bok) {
+        this.bok = bok; }
+    public int obwod() {
+        return bok * 4; }
+    public int pole() {
+        return (int) Math.pow(bok, 2);
+    }
+}
