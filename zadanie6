@@ -1,0 +1,37 @@
+package com.company;
+
+public class Main {
+    public static int attack(int obrażenia, int pancerz){
+        if (obrażenia > pancerz) {
+            return obrażenia - pancerz;
+        }
+        else{
+            return pancerz - obrażenia;
+        }
+    }
+    public static void main(String[] args) {
+
+        Gracz gracz = new Gracz();
+        gracz.choose_eq();
+
+        Przeciwnik przeciwnik = new Przeciwnik();
+        przeciwnik.choose_eq();
+
+        while (true){
+            przeciwnik.życie -= attack(gracz.obrażenia, przeciwnik.pancerz);
+            System.out.println("Uderzasz przeciwnika za: "+attack(gracz.obrażenia, przeciwnik.pancerz) + " i ma teraz ilosc HP: "+ przeciwnik.życie);
+            if (przeciwnik.życie <= 1){
+                System.out.println("*Wygrana Gracza*");
+                break;
+            }
+            gracz.życie -= attack(przeciwnik.obrażenia, gracz.pancerz);
+            System.out.println("Przeciwnik uderza cie za: "+ attack(przeciwnik.obrażenia, gracz.pancerz) + " i masz HP: "+ gracz.życie);
+            if (gracz.życie <= 1){
+                System.out.println("*Wygrana Przeciwnika*");
+                break;
+            }
+        }
+
+//Norbert Kulik
+    }
+}
