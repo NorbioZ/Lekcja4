@@ -1,0 +1,25 @@
+package com.company;
+
+public class Wiatrak {
+    int szybk;
+    boolean stan;
+    double promien;
+    String kolor;
+
+    public Wiatrak(int szybk, boolean Włączony, double promien, String kolor){
+        this.szybk = szybk;
+        this.stan = Włączony;
+        this.promien = promien;
+        this.kolor = kolor;
+    }
+    Wiatrak(){
+        this.szybk = Wiatrak_Level.FAST.stała_Kulik;
+        this.stan = true ;
+        this.promien = 12;
+        this.kolor = "Czerwony";
+    }
+    public void info(){
+        System.out.println("Prędkość wiatraka: " + this.szybk + "\n Stan: "+this.stan+"\n Promień wiatraka: "+this.promien+"\n Kolor: "+this.kolor);
+    }
+//Norbert Kulik
+}
