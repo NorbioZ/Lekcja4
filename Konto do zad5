@@ -1,0 +1,29 @@
+    public void deposit(){
+        System.out.print("How much do you want to pay?");
+        double amount = scanner.nextDouble();
+        if (amount < 0 ){
+            System.out.println("You are trying to deposit a negative amount of money");
+        }
+        else{
+            this.balance += amount;
+        }
+    }
+    public void withdraw(){
+        System.out.print("How much do you want to withdraw?");
+        double amount = scanner.nextDouble();
+        if (amount < 0 ) {
+            System.out.println("You are trying to withdraw a negative amount of money");
+        }
+        else {
+            if (amount > this.balance) {
+                System.out.println("You don't have that many funds in your account");
+            } else {
+                this.balance -= amount;
+            }
+        }
+    }
+    public void info(){
+        System.out.println("Your account balance: "+ this.balance);
+    }
+    //Norbetr Kulik
+}
